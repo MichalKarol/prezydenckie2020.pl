@@ -1,0 +1,31 @@
+@value colors: "../colors.css";
+@value flag-red-color from colors;
+
+.MainView {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-columns: auto;
+}
+.MainView section {
+  padding: 64px 10px;
+  border-bottom: 1px solid flag-red-color;
+  padding-right: 10vh;
+}
+.MainView section:not(:last-of-type) {
+  border-bottom: 1px solid flag-red-color;
+}
+
+.icon {
+  margin-left: 5px;
+}
+
+.noWrap {
+  display: inline-block;
+}
+.textImportant {
+  color: flag-red-color;
+}
+
+.textImportant > time {
+  font-weight: 700;
+}

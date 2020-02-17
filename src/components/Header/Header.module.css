@@ -1,0 +1,54 @@
+@value colors: "../../colors.css";
+@value flag-red-color from colors;
+@value breakpoints: "../../breakpoints.css";
+@value max-mobile from breakpoints;
+
+.Header {
+  grid-area: "header";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  composes: lato from "../../index.css";
+  text-transform: uppercase;
+  text-align: center;
+  color: flag-red-color;
+}
+.navitem {
+  composes: lato from "../../index.css";
+  text-decoration: none;
+  text-transform: uppercase;
+  color: flag-red-color;
+  padding: 10px;
+  display: block;
+  margin: 0 4px;
+  border-bottom: 2px solid transparent;
+}
+.navitem:hover {
+  border-bottom: 2px solid flag-red-color;
+}
+
+.MobileHeader {
+  display: none;
+}
+
+@media only screen and (max-width: max-mobile) {
+  .MobileHeader {
+    display: block;
+  }
+}
+
+.StandardHeader {
+  display: grid;
+}
+
+@media only screen and (max-width: max-mobile) {
+  .StandardHeader {
+    display: none;
+  }
+}
+
+.links {
+  display: flex;
+}

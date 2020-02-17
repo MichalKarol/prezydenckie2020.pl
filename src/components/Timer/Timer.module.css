@@ -1,0 +1,22 @@
+@value colors: "../../colors.css";
+@value flag-red-color from colors;
+
+.Timer {
+}
+.counter {
+  display: flex;
+  justify-content: center;
+}
+
+.TPart {
+  width: 5rem;
+  text-align: center;
+  margin: 0px 5px;
+}
+
+.TPartMain {
+  color: flag-red-color;
+  font-size: 1.5rem;
+  border-bottom: 2px solid flag-red-color;
+  margin-bottom: 5px;
+}
